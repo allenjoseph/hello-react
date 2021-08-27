@@ -2,7 +2,15 @@ const Animal = (props) => {
   return (
     <div>
       <h2>{props.name}</h2>
-      <small>{props.family}</small>
+      {props.description}
+      <small>
+        <strong>Class: </strong>
+        {props.class}
+      </small>
+      <small>
+        <strong>Order: </strong>
+        {props.order}
+      </small>
     </div>
   );
 };
