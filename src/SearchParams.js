@@ -1,5 +1,5 @@
 import { useState } from "react";
-import SearchResult from "./SearchResult";
+import SearchResults from "./SearchResults";
 import useAnimals from "./useAnimals";
 
 const FAMILIES = ["Felidae", "Canidae", "Ursidae", "Mustelidae"];
@@ -29,7 +29,7 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      <SearchResult animals={animals} />
+      <SearchResults animals={animals} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-const SearchResult = ({ animals }) => {
+const SearchResults = ({ animals }) => {
   return (
     <div>
       {!animals.length ? (
@@ -14,4 +14,4 @@ const SearchResult = ({ animals }) => {
   );
 };
 
-export default SearchResult;
+export default SearchResults;
