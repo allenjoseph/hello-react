@@ -12,7 +12,7 @@ const SearchParams = () => {
     <div className="search-params">
       <form>
         <label htmlFor="family">
-          family
+          Select a family
           <select
             id="family"
             value={family}
@@ -27,7 +27,6 @@ const SearchParams = () => {
             ))}
           </select>
         </label>
-        <button>Submit</button>
       </form>
       <SearchResults animals={animals} />
     </div>
