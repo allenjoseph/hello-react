@@ -2,6 +2,7 @@ import { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Pic from "./Pic";
 import ErrorBoundary from "./ErrorBoundary";
+import ThemeContext from "./ThemeContext";
 
 class ResultDetails extends Component {
   state = { loading: true };
@@ -29,7 +30,9 @@ class ResultDetails extends Component {
 
     return (
       <div>
-        <h2>{name}</h2>
+        <ThemeContext.Consumer>
+          {([theme]) => (<h2 style={{color: theme}}>{name}</h2>)}
+        </ThemeContext.Consumer>
         <p>{description}</p>
         <Pic source={photo} description={name} />
       </div>

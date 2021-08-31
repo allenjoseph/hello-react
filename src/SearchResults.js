@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import ThemeContext from "./ThemeContext";
+
 const SearchResults = ({ animals }) => {
+  const [themeColor] = useContext(ThemeContext);
+
   return (
     <div>
       {!animals.length ? (
@@ -6,7 +12,9 @@ const SearchResults = ({ animals }) => {
       ) : (
         animals.map((o) => (
           <div key={o.name}>
-            <h2>{o.name}</h2>
+            <Link to={`details/${o.name}`} style={{color: themeColor}}>
+              <h2>{o.name}</h2>
+            </Link>
           </div>
         ))
       )}
