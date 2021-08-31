@@ -14,20 +14,21 @@ const App = () => {
       <div>
         <Router>
           <header>
-            <Link to="/" style={{color: theme}}>
+            <Link to="/" style={{ color: theme }}>
               <h1>Zoo</h1>
             </Link>
-            <label htmlFor="theme" style={{float: "right"}}>
+            <label htmlFor="theme" style={{ float: "right" }}>
               Theme
               <select
                 value={theme}
-                onChange={e => setTheme(e.target.value)}
-                onBlur={e => setTheme(e.target.value)}>
-                  <option value="black">Black</option>
-                  <option value="chartreuse">Chartreuse</option>
-                  <option value="mediumorchid">Medium Orchid</option>
-                  <option value="peru">Peru</option>
-                </select>
+                onChange={(e) => setTheme(e.target.value)}
+                onBlur={(e) => setTheme(e.target.value)}
+              >
+                <option value="black">Black</option>
+                <option value="chartreuse">Chartreuse</option>
+                <option value="mediumorchid">Medium Orchid</option>
+                <option value="peru">Peru</option>
+              </select>
             </label>
           </header>
           <Switch>

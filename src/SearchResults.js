@@ -12,7 +12,7 @@ const SearchResults = ({ animals }) => {
       ) : (
         animals.map((o) => (
           <div key={o.name}>
-            <Link to={`details/${o.name}`} style={{color: themeColor}}>
+            <Link to={`details/${o.name}`} style={{ color: themeColor }}>
               <h2>{o.name}</h2>
             </Link>
           </div>
